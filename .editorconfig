@@ -1,0 +1,31 @@
+[*]
+end_of_line = crlf
+
+[*.xml]
+indent_style = space
+
+[*.cs]
+
+# SA1009: Closing parenthesis must be spaced correctly
+dotnet_diagnostic.SA1009.severity = silent
+
+# SA1111: Closing parenthesis must be on line of last parameter
+dotnet_diagnostic.SA1111.severity = silent
+
+# SA1116: Split parameters must start on line after declaration
+dotnet_diagnostic.SA1116.severity = silent
+
+# SA1117: Parameters must be on same line or separate lines
+dotnet_diagnostic.SA1117.severity = silent
+
+# SA1118: Parameter must not span multiple lines
+dotnet_diagnostic.SA1118.severity = silent
+
+# SA1200: Using directives must be placed correctly
+dotnet_diagnostic.SA1200.severity = silent
+
+# SA1633: File must have header
+dotnet_diagnostic.SA1633.severity = silent
+
+# SA1652: Enable XML documentation output
+dotnet_diagnostic.SA1652.severity = silent

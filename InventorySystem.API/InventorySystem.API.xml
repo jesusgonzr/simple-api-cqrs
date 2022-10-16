@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InventorySystem.API</name>
+    </assembly>
+    <members>
+        <member name="T:InventorySystem.API.Controllers.ProductController">
+            <summary>
+            Controlador.
+            </summary>
+        </member>
+        <member name="M:InventorySystem.API.Controllers.ProductController.#ctor(MediatR.IMediator,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{InventorySystem.API.Controllers.ProductController},InventorySystem.Application.Interfaces.IProductQueries)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InventorySystem.API.Controllers.ProductController"/> class.
+            </summary>
+            <param name="mediator">Objecto mediator.</param>
+            <param name="mapper">Objecto IMapper.</param>
+            <param name="logger">Objecto log.</param>
+            <param name="queries">Objecto para consultas.</param>
+        </member>
+        <member name="M:InventorySystem.API.Controllers.ProductController.CreateProduct(InventorySystem.Application.Commands.CreateProductCommand)">
+            <summary>
+            Permite crear un nuevo producto.
+            </summary>
+            <param name="command">Objecto de tipo CreateProductCommand.</param>
+            <returns>Devuelve el producto creado.</returns>
+            <response code="200">Objeto ProductQuery.</response>
+            <response code="422">Unprocessable entity.</response>
+        </member>
+        <member name="M:InventorySystem.API.Controllers.ProductController.DeleteProduct(InventorySystem.Application.Commands.DeleteProductCommand)">
+            <summary>
+            Permite eliminar un producto.
+            </summary>
+            <param name="command">Objecto de tipo DeleteProductCommand.</param>
+            <returns>Devuelve un ok si todo ha ido de forma correcta.</returns>
+            <response code="200">Todo correcto.</response>
+            <response code="422">Unprocessable entity.</response>
+        </member>
+        <member name="M:InventorySystem.API.Controllers.ProductController.GetAll">
+            <summary>
+            Buscar todos los productos disponibles.
+            </summary>
+            <returns>Devuelve todos los productos disponibles.</returns>
+            <response code="200">Lista de productos..</response>
+            <response code="404">No existe productos.</response>
+        </member>
+        <member name="M:InventorySystem.API.Controllers.ProductController.GetByName(System.String)">
+            <summary>
+            Buscar todos los productos disponibles.
+            </summary>
+            <param name="name">Nombre por el que buscar.</param>
+            <returns>Devuelve todos los productos disponibles.</returns>
+            <response code="200">Lista de productos..</response>
+            <response code="404">No existe productos.</response>
+        </member>
+        <member name="T:InventorySystem.API.CustomServicies">
+            <summary>
+            Servicios especificos para el API.
+            </summary>
+        </member>
+        <member name="M:InventorySystem.API.CustomServicies.AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Agrega los diferentes servicio personalizados de la aplicación.
+            </summary>
+            <param name="services">IServiceCollection.</param>
+            <returns>IServiceCollection with dependencies.</returns>
+        </member>
+        <member name="T:InventorySystem.API.Startup">
+            <summary>
+            Statup class.
+            </summary>
+        </member>
+        <member name="M:InventorySystem.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InventorySystem.API.Startup"/> class.
+            </summary>
+            <param name="configuration">Objecto configuration.</param>
+        </member>
+        <member name="P:InventorySystem.API.Startup.Configuration">
+            <summary>
+            Gets configuration.
+            </summary>
+        </member>
+        <member name="M:InventorySystem.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="services">Servies app.</param>
+        </member>
+        <member name="M:InventorySystem.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">Application builder.</param>
+            <param name="env">Enviroment.</param>
+        </member>
+    </members>
+</doc>
